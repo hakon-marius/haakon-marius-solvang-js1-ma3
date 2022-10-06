@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+.apicontainer {
+    justify-content: center;
+}
+
+.grid-item {
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    height: 200px;
+    gap: 20px;
+}
+
+
+.cards {
+    height: 200px;
+    background-color: rgb(168, 225, 225);
+    margin: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Tahoma, Verdana, "Open Sans";
+}
+
+p:first-child {
+    font-weight: bolder;
+}
+
+h1 {
+    margin-left: 5%;
+    text-align: center;
+    font-family: Tahoma, Verdana, "Open Sans";
+}
+
+.error {
+    background-color: red;
+    margin-left: auto;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: yellow;
+    border-radius: 15px;
+}
+
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(227, 236, 236);
+    transition: opacity 0.80s, visibility 0.80s;
+}
+
+.hide-loader {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 20px solid #666;
+    border-radius: 50%;
+    border-top-color: blue;
+    animation: loading 0.8s ease infinite;
+}
+
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .grid-item {
+        grid-template-columns: 350px 350px 350px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .grid-item {
+        grid-template-columns: 350px 350px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .grid-item {
+        grid-template-columns: 350px;
+    }
+}
