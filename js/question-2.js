@@ -14,7 +14,7 @@ async function getGameInformation() {
             if (i === 8) {
                 break;
             }
-            myApiContainer.innerHTML += `<div class="apicontainer"><div class="cards"><p>${facts[i].name}</p> 
+            myApiContainer.innerHTML += `<div class="apicontainer"><div class="cards"><p>${facts[i].name}</p>
         <p>Rating: ${facts[i].rating}</p> <p>Number of tags: ${facts[i].tags.length}</p></div></div>`;
         }
     } catch (error) {
