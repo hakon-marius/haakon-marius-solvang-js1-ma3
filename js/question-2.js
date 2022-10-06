@@ -1,5 +1,6 @@
 const apiKey = "c76de390b629492ebbfe9f1e1253e770";
-const url = `https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=${apiKey}`;
+const url = `https://api.rawg.io/api/games?dates=\n
+            2019-01-01,2019-12-31&ordering=-rating&key=${apiKey}`;
 
 const myApiContainer = document.querySelector(".apicontainer");
 async function getGameInformation() {
@@ -14,12 +15,15 @@ async function getGameInformation() {
             if (i === 8) {
                 break;
             }
-            myApiContainer.innerHTML += `<div class="apicontainer"><div class="cards"><p>${facts[i].name}</p>
-        <p>Rating: ${facts[i].rating}</p> <p>Number of tags: ${facts[i].tags.length}</p></div></div>`;
+            myApiContainer.innerHTML +=
+                `<div class="apicontainer"><div class="cards">
+            <p>${facts[i].name}</p><p>Rating: ${facts[i].rating}</p>
+        <p>Number of tags: ${facts[i].tags.length}</p></div></div>`;
         }
     } catch (error) {
         console.log("error occurred", error);
-        myApiContainer.innerHTML = `<div class="error">OBS! Error occurred!</div>`;
+        myApiContainer.innerHTML =
+            `<div class="error">OBS! Error occurred!</div>`;
     }
 }
 getGameInformation()
