@@ -32,7 +32,8 @@ window.addEventListener("load", function () {
     const loading = document.querySelector(".loading");
     loading.classList.add("hide-loader");
     loading.addEventListener("transitioned", function () {
-        document.body.removeChild("loading");
+        document.body.removechild("loading");
+
     })
 });
 
