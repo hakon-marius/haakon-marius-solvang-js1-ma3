@@ -13,7 +13,6 @@
     gap: 20px;
 }
 
-
 .cards {
     height: 200px;
     background-color: rgb(168, 225, 225);
@@ -42,7 +41,6 @@ h1 {
     color: yellow;
     border-radius: 15px;
 }
-
 
 .loading {
     position: fixed;
